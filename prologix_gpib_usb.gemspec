@@ -10,15 +10,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Rob Carruthers']
   spec.email         = ['robcarruthers@mac.com']
 
-  spec.summary       = 'Prologix GPIB USB controiller driver for ruby.'
-  spec.description   = 'Prologix GPIB USB controiller driver for ruby.'
-  spec.homepage      = 'https://codemuster.co.nz'
+  spec.summary       = 'Ruby wrapper for the Prologix GPIB USB device.'
+  spec.description   = 'Ruby wrapper for the Prologix GPIB USB device.'
+  spec.homepage      = 'https://github.com/robcarruthers/PrologixGpibUsb'
 
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  spec.metadata['allowed_push_host'] = spec.homepage
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://codemuster.co.nz'
-  spec.metadata['changelog_uri'] = 'https://codemuster.co.nz'
+  spec.metadata['source_code_uri'] = spec.homepage
+  spec.metadata['changelog_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
