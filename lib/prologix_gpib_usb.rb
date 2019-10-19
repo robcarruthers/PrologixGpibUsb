@@ -6,7 +6,7 @@ module PrologixGpibUsb
   require 'rubyserial'
   class Error < StandardError; end
 
-  EOL = "\r\n"
+  EOL = "\n\r"
 
   def open_connection
     path_str, dir = if RubySerial::ON_LINUX
@@ -54,6 +54,18 @@ module PrologixGpibUsb
     return unless connected?
 
     @serial_port.gets.chomp
+  end
+
+  def readbyte
+    return unless connected?
+
+    @serial_port.getbyte
+  end
+
+  def flush
+    return unless connected?
+
+    until @serial_port.getbyte.nil? do end
   end
 
   def set_read_timeout(milliseconds)
