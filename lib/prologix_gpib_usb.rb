@@ -62,6 +62,10 @@ module PrologixGpibUsb
     @serial_port.getbyte
   end
 
+  def set_device_talker
+    write('++read eoi')
+  end
+
   def flush
     return unless connected?
 
