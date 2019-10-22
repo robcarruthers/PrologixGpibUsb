@@ -53,7 +53,7 @@ module PrologixGpibUsb
   def readline
     return unless connected?
 
-    @serial_port.gets.chomp
+    @serial_port.gets
   end
 
   def readbyte
